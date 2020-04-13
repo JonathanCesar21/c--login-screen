@@ -64,5 +64,29 @@ namespace TelaLogin
         {
 
         }
+
+        private void txtUsuario_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtSenha_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnEntrar_Click(object sender, EventArgs e)
+        {
+            string nome = txtUsuario.Text;
+            string senha = txtSenha.Text;
+
+            MessageBox.Show("Seja bem vindo, " + nome + "!");
+        }
+
+        private void btnRegistrar_Click(object sender, EventArgs e)
+        {
+            Form2 TelaRegistro = new Form2();
+            TelaRegistro.ShowDialog();
+        }
     }
 }

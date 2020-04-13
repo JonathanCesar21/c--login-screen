@@ -32,8 +32,8 @@
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.txtUsuario = new System.Windows.Forms.TextBox();
             this.txtSenha = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnEntrar = new System.Windows.Forms.Button();
+            this.btnRegistrar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.pctCadeado = new System.Windows.Forms.PictureBox();
@@ -51,7 +51,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Crimson;
-            this.panel1.Location = new System.Drawing.Point(-2, -2);
+            this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(274, 565);
             this.panel1.TabIndex = 0;
@@ -79,6 +79,7 @@
             this.txtUsuario.TabStop = false;
             this.txtUsuario.Text = "Usuário";
             this.txtUsuario.Click += new System.EventHandler(this.txtUsuario_Click);
+            this.txtUsuario.TextChanged += new System.EventHandler(this.txtUsuario_TextChanged);
             // 
             // txtSenha
             // 
@@ -95,41 +96,44 @@
             this.txtSenha.TabStop = false;
             this.txtSenha.Text = "Senha";
             this.txtSenha.Click += new System.EventHandler(this.txtSenha_Click);
+            this.txtSenha.TextChanged += new System.EventHandler(this.txtSenha_TextChanged);
             // 
-            // button1
+            // btnEntrar
             // 
-            this.button1.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
-            this.button1.BackColor = System.Drawing.Color.Crimson;
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button1.Cursor = System.Windows.Forms.Cursors.Default;
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.Crimson;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.SystemColors.Control;
-            this.button1.Location = new System.Drawing.Point(346, 289);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(232, 46);
-            this.button1.TabIndex = 9;
-            this.button1.Text = "Entrar";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnEntrar.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
+            this.btnEntrar.BackColor = System.Drawing.Color.Crimson;
+            this.btnEntrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnEntrar.Cursor = System.Windows.Forms.Cursors.Default;
+            this.btnEntrar.FlatAppearance.BorderColor = System.Drawing.Color.Crimson;
+            this.btnEntrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEntrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEntrar.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnEntrar.Location = new System.Drawing.Point(346, 289);
+            this.btnEntrar.Name = "btnEntrar";
+            this.btnEntrar.Size = new System.Drawing.Size(232, 46);
+            this.btnEntrar.TabIndex = 9;
+            this.btnEntrar.Text = "Entrar";
+            this.btnEntrar.UseVisualStyleBackColor = false;
+            this.btnEntrar.Click += new System.EventHandler(this.btnEntrar_Click);
             // 
-            // button2
+            // btnRegistrar
             // 
-            this.button2.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
-            this.button2.BackColor = System.Drawing.SystemColors.Control;
-            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button2.Cursor = System.Windows.Forms.Cursors.Default;
-            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.Crimson;
-            this.button2.FlatAppearance.BorderSize = 2;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.Crimson;
-            this.button2.Location = new System.Drawing.Point(346, 363);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(232, 46);
-            this.button2.TabIndex = 10;
-            this.button2.Text = "Registrar";
-            this.button2.UseVisualStyleBackColor = false;
+            this.btnRegistrar.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
+            this.btnRegistrar.BackColor = System.Drawing.SystemColors.Control;
+            this.btnRegistrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnRegistrar.Cursor = System.Windows.Forms.Cursors.Default;
+            this.btnRegistrar.FlatAppearance.BorderColor = System.Drawing.Color.Crimson;
+            this.btnRegistrar.FlatAppearance.BorderSize = 2;
+            this.btnRegistrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRegistrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRegistrar.ForeColor = System.Drawing.Color.Crimson;
+            this.btnRegistrar.Location = new System.Drawing.Point(346, 363);
+            this.btnRegistrar.Name = "btnRegistrar";
+            this.btnRegistrar.Size = new System.Drawing.Size(232, 46);
+            this.btnRegistrar.TabIndex = 10;
+            this.btnRegistrar.Text = "Registrar";
+            this.btnRegistrar.UseVisualStyleBackColor = false;
+            this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click);
             // 
             // label1
             // 
@@ -210,8 +214,8 @@
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnRegistrar);
+            this.Controls.Add(this.btnEntrar);
             this.Controls.Add(this.txtSenha);
             this.Controls.Add(this.txtUsuario);
             this.Controls.Add(this.flowLayoutPanel1);
@@ -237,8 +241,8 @@
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.TextBox txtUsuario;
         private System.Windows.Forms.TextBox txtSenha;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnEntrar;
+        private System.Windows.Forms.Button btnRegistrar;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox4;
