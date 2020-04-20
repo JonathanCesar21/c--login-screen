@@ -41,6 +41,8 @@
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.btnFechar = new System.Windows.Forms.Button();
+            this.btnMinimizar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pctCadeado)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctPessoa)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
@@ -101,6 +103,7 @@
             // btnEntrar
             // 
             this.btnEntrar.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
+            this.btnEntrar.AutoSize = true;
             this.btnEntrar.BackColor = System.Drawing.Color.Crimson;
             this.btnEntrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnEntrar.Cursor = System.Windows.Forms.Cursors.Default;
@@ -202,11 +205,41 @@
             this.pictureBox3.TabIndex = 11;
             this.pictureBox3.TabStop = false;
             // 
+            // btnFechar
+            // 
+            this.btnFechar.BackColor = System.Drawing.SystemColors.Control;
+            this.btnFechar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFechar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFechar.ForeColor = System.Drawing.Color.Crimson;
+            this.btnFechar.Location = new System.Drawing.Point(639, 12);
+            this.btnFechar.Name = "btnFechar";
+            this.btnFechar.Size = new System.Drawing.Size(33, 30);
+            this.btnFechar.TabIndex = 20;
+            this.btnFechar.Text = "X";
+            this.btnFechar.UseVisualStyleBackColor = false;
+            this.btnFechar.Click += new System.EventHandler(this.btnFechar_Click);
+            // 
+            // btnMinimizar
+            // 
+            this.btnMinimizar.BackColor = System.Drawing.SystemColors.Control;
+            this.btnMinimizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMinimizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMinimizar.ForeColor = System.Drawing.Color.Crimson;
+            this.btnMinimizar.Location = new System.Drawing.Point(600, 12);
+            this.btnMinimizar.Name = "btnMinimizar";
+            this.btnMinimizar.Size = new System.Drawing.Size(33, 30);
+            this.btnMinimizar.TabIndex = 21;
+            this.btnMinimizar.Text = "--";
+            this.btnMinimizar.UseVisualStyleBackColor = false;
+            this.btnMinimizar.Click += new System.EventHandler(this.btnMinimizar_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(684, 561);
+            this.Controls.Add(this.btnMinimizar);
+            this.Controls.Add(this.btnFechar);
             this.Controls.Add(this.pctPessoa);
             this.Controls.Add(this.pctCadeado);
             this.Controls.Add(this.flowLayoutPanel2);
@@ -250,6 +283,8 @@
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
         private System.Windows.Forms.PictureBox pctCadeado;
         public System.Windows.Forms.PictureBox pctPessoa;
+        private System.Windows.Forms.Button btnFechar;
+        private System.Windows.Forms.Button btnMinimizar;
     }
 }
 

@@ -35,18 +35,21 @@
             this.txtSenhaRegistro = new System.Windows.Forms.TextBox();
             this.txtUsuarioRegistro = new System.Windows.Forms.TextBox();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pctCadeado2 = new System.Windows.Forms.PictureBox();
             this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
             this.txtSenhaRegistroConfirmar = new System.Windows.Forms.TextBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pctPessoa2 = new System.Windows.Forms.PictureBox();
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.flowLayoutPanel4 = new System.Windows.Forms.FlowLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
             this.btnRegistrar = new System.Windows.Forms.Button();
+            this.btnFechar = new System.Windows.Forms.Button();
+            this.btnMinimizar = new System.Windows.Forms.Button();
+            this.btnLogin = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pctPessoa)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctCadeado)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pctCadeado2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pctPessoa2)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -97,6 +100,7 @@
             this.txtSenhaRegistro.TabIndex = 22;
             this.txtSenhaRegistro.TabStop = false;
             this.txtSenhaRegistro.Text = "Senha";
+            this.txtSenhaRegistro.Click += new System.EventHandler(this.txtSenhaRegistro_Click_1);
             // 
             // txtUsuarioRegistro
             // 
@@ -121,14 +125,14 @@
             this.flowLayoutPanel1.Size = new System.Drawing.Size(236, 2);
             this.flowLayoutPanel1.TabIndex = 20;
             // 
-            // pictureBox1
+            // pctCadeado2
             // 
-            this.pictureBox1.Image = global::TelaLogin.Properties.Resources.cadeadocerto;
-            this.pictureBox1.Location = new System.Drawing.Point(348, 323);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(18, 25);
-            this.pictureBox1.TabIndex = 28;
-            this.pictureBox1.TabStop = false;
+            this.pctCadeado2.Image = global::TelaLogin.Properties.Resources.cadeadocerto;
+            this.pctCadeado2.Location = new System.Drawing.Point(348, 323);
+            this.pctCadeado2.Name = "pctCadeado2";
+            this.pctCadeado2.Size = new System.Drawing.Size(18, 25);
+            this.pctCadeado2.TabIndex = 28;
+            this.pctCadeado2.TabStop = false;
             // 
             // flowLayoutPanel3
             // 
@@ -152,15 +156,16 @@
             this.txtSenhaRegistroConfirmar.TabIndex = 26;
             this.txtSenhaRegistroConfirmar.TabStop = false;
             this.txtSenhaRegistroConfirmar.Text = "Senha";
+            this.txtSenhaRegistroConfirmar.Click += new System.EventHandler(this.txtSenhaRegistroConfirmar_Click);
             // 
-            // pictureBox2
+            // pctPessoa2
             // 
-            this.pictureBox2.Image = global::TelaLogin.Properties.Resources.pessoacerta;
-            this.pictureBox2.Location = new System.Drawing.Point(348, 199);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(22, 23);
-            this.pictureBox2.TabIndex = 31;
-            this.pictureBox2.TabStop = false;
+            this.pctPessoa2.Image = global::TelaLogin.Properties.Resources.pessoacerta;
+            this.pctPessoa2.Location = new System.Drawing.Point(348, 199);
+            this.pctPessoa2.Name = "pctPessoa2";
+            this.pctPessoa2.Size = new System.Drawing.Size(22, 23);
+            this.pctPessoa2.TabIndex = 31;
+            this.pctPessoa2.TabStop = false;
             // 
             // txtEmail
             // 
@@ -175,6 +180,7 @@
             this.txtEmail.TabIndex = 30;
             this.txtEmail.TabStop = false;
             this.txtEmail.Text = "Email";
+            this.txtEmail.Click += new System.EventHandler(this.txtEmail_Click);
             // 
             // flowLayoutPanel4
             // 
@@ -189,7 +195,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Crimson;
-            this.label1.Location = new System.Drawing.Point(345, 304);
+            this.label1.Location = new System.Drawing.Point(345, 296);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(135, 15);
             this.label1.TabIndex = 32;
@@ -198,32 +204,83 @@
             // btnRegistrar
             // 
             this.btnRegistrar.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
-            this.btnRegistrar.BackColor = System.Drawing.SystemColors.Control;
+            this.btnRegistrar.BackColor = System.Drawing.Color.Crimson;
             this.btnRegistrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnRegistrar.Cursor = System.Windows.Forms.Cursors.Default;
             this.btnRegistrar.FlatAppearance.BorderColor = System.Drawing.Color.Crimson;
             this.btnRegistrar.FlatAppearance.BorderSize = 2;
             this.btnRegistrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRegistrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRegistrar.ForeColor = System.Drawing.Color.Crimson;
-            this.btnRegistrar.Location = new System.Drawing.Point(347, 409);
+            this.btnRegistrar.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnRegistrar.Location = new System.Drawing.Point(347, 386);
             this.btnRegistrar.Name = "btnRegistrar";
             this.btnRegistrar.Size = new System.Drawing.Size(232, 46);
             this.btnRegistrar.TabIndex = 33;
             this.btnRegistrar.Text = "Registrar";
             this.btnRegistrar.UseVisualStyleBackColor = false;
+            this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click);
+            // 
+            // btnFechar
+            // 
+            this.btnFechar.BackColor = System.Drawing.SystemColors.Control;
+            this.btnFechar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFechar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFechar.ForeColor = System.Drawing.Color.Crimson;
+            this.btnFechar.Location = new System.Drawing.Point(639, 12);
+            this.btnFechar.Name = "btnFechar";
+            this.btnFechar.Size = new System.Drawing.Size(33, 30);
+            this.btnFechar.TabIndex = 34;
+            this.btnFechar.Text = "X";
+            this.btnFechar.UseVisualStyleBackColor = false;
+            this.btnFechar.Click += new System.EventHandler(this.btnFechar_Click);
+            // 
+            // btnMinimizar
+            // 
+            this.btnMinimizar.BackColor = System.Drawing.SystemColors.Control;
+            this.btnMinimizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMinimizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMinimizar.ForeColor = System.Drawing.Color.Crimson;
+            this.btnMinimizar.Location = new System.Drawing.Point(600, 12);
+            this.btnMinimizar.Name = "btnMinimizar";
+            this.btnMinimizar.Size = new System.Drawing.Size(33, 30);
+            this.btnMinimizar.TabIndex = 35;
+            this.btnMinimizar.Text = "--";
+            this.btnMinimizar.UseVisualStyleBackColor = false;
+            this.btnMinimizar.Click += new System.EventHandler(this.btnMinimizar_Click);
+            // 
+            // btnLogin
+            // 
+            this.btnLogin.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
+            this.btnLogin.BackColor = System.Drawing.SystemColors.Control;
+            this.btnLogin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnLogin.Cursor = System.Windows.Forms.Cursors.Default;
+            this.btnLogin.FlatAppearance.BorderColor = System.Drawing.Color.Crimson;
+            this.btnLogin.FlatAppearance.BorderSize = 2;
+            this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogin.ForeColor = System.Drawing.Color.Crimson;
+            this.btnLogin.Location = new System.Drawing.Point(347, 468);
+            this.btnLogin.Name = "btnLogin";
+            this.btnLogin.Size = new System.Drawing.Size(232, 46);
+            this.btnLogin.TabIndex = 36;
+            this.btnLogin.Text = "Entrar";
+            this.btnLogin.UseVisualStyleBackColor = false;
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(684, 561);
+            this.Controls.Add(this.btnLogin);
+            this.Controls.Add(this.btnMinimizar);
+            this.Controls.Add(this.btnFechar);
             this.Controls.Add(this.btnRegistrar);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.pctPessoa2);
             this.Controls.Add(this.txtEmail);
             this.Controls.Add(this.flowLayoutPanel4);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.pctCadeado2);
             this.Controls.Add(this.flowLayoutPanel3);
             this.Controls.Add(this.txtSenhaRegistroConfirmar);
             this.Controls.Add(this.pctPessoa);
@@ -240,8 +297,8 @@
             this.Load += new System.EventHandler(this.Form2_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pctPessoa)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctCadeado)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pctCadeado2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pctPessoa2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -256,13 +313,16 @@
         private System.Windows.Forms.TextBox txtSenhaRegistro;
         private System.Windows.Forms.TextBox txtUsuarioRegistro;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pctCadeado2;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel3;
         private System.Windows.Forms.TextBox txtSenhaRegistroConfirmar;
-        public System.Windows.Forms.PictureBox pictureBox2;
+        public System.Windows.Forms.PictureBox pctPessoa2;
         private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel4;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnRegistrar;
+        private System.Windows.Forms.Button btnFechar;
+        private System.Windows.Forms.Button btnMinimizar;
+        private System.Windows.Forms.Button btnLogin;
     }
 }

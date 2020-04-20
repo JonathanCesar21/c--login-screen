@@ -17,6 +17,9 @@ namespace TelaLogin
             InitializeComponent();
         }
 
+        
+
+
         private void Form1_Load(object sender, EventArgs e)
         {
 
@@ -46,7 +49,7 @@ namespace TelaLogin
             txtUsuario.ForeColor = Color.FromArgb(220, 20, 60);
 
             pctCadeado.Image = Properties.Resources.cadeadocerto;
-            txtSenha.ForeColor = Color.FromArgb(220, 20, 60);
+            txtSenha.ForeColor = Color.FromArgb(105, 105, 105);
         }
 
 
@@ -57,7 +60,7 @@ namespace TelaLogin
             txtSenha.ForeColor = Color.FromArgb(220, 20, 60);
 
             pctPessoa.Image = Properties.Resources.pessoacerta;
-            txtUsuario.ForeColor = Color.FromArgb(220, 20, 60);
+            txtUsuario.ForeColor = Color.FromArgb(105, 105, 105);
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -75,18 +78,42 @@ namespace TelaLogin
 
         }
 
-        private void btnEntrar_Click(object sender, EventArgs e)
+        public void btnEntrar_Click(object sender, EventArgs e)
         {
+
+
             string nome = txtUsuario.Text;
             string senha = txtSenha.Text;
+          //  string UsuarioR = Form2.UsuarioR.Text;
+           // string SenhaR = Form2.SenhaR.Text;
 
-            MessageBox.Show("Seja bem vindo, " + nome + "!");
+          
         }
 
         private void btnRegistrar_Click(object sender, EventArgs e)
         {
-            Form2 TelaRegistro = new Form2();
-            TelaRegistro.ShowDialog();
+            var Form2 = new Form2();
+            this.Hide(); //vai “esconder” o formulário atual
+            Form2.ShowDialog();
+            
+
+        }
+       
+        private void btnFechar_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void btnMinimizar_Click(object sender, EventArgs e)
+        {
+
+            this.WindowState = FormWindowState.Minimized;
+            
+        }
+
+        private void btnMaximizar_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }
